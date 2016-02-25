@@ -1,0 +1,530 @@
+/**
+*
+*	Designed by James Parkes
+*	ADTRAN DVT Co-op - Spring 2012 Term
+*	Supervisor: Les Wilson
+*
+*	ELMO - Experimental Link Module WebGui v1.0
+*	elmoTemplate.css
+*
+*	Last Updated: March 8, 2012
+*
+**/
+
+/**
+*
+*	elmoTemplate.css Basic HTML Tag Definitions
+*	CSS Styling will apply to following Tags
+*	body, h3, label
+*
+**/
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-color: #333;
+	font-size: 12px;
+	background-color: #f5f5f5;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+
+h3 {
+	font-size: 120%;
+}
+
+label {
+    	display: inline;
+    	margin: 0 5px 0 5px;
+    	text-align: right;
+    	line-height: 22px;
+	font-size: 12px;
+}
+
+/**
+*
+*	Elmo Website Template Division Structure
+*	- div #wrapper - contains all divisions, centers page, and sets width
+*		Top of the Page
+*			- div #copyright
+*			- div #header
+*		Center of the Page
+*			Left Side of the Page
+*				- div #pagecontent - contains all divisions for left side of the page
+*					- div #mainmenu
+*					- div #activemenu
+*					- div #selectionbar
+*					- div #breadcrumbs
+*					- div #content
+*			Right Side of the Page
+*				- div #sidebar - contains all divisions for right side of the page
+*		Bottom  of the Page
+*				- div #footer
+*
+*	The structure above is created using CSS IDs because it is common and unique to
+*	every page of the ELMO WebGui
+*
+*	elmoTemplate.css ID Definitions
+*	CSS Styling will apply to following IDs
+*	#copyright, #header, #pagecontent, #mainmenu, #activemenu, #selectionbar,
+*	#breadcrumbs, #content, #sidebar, #footer, #mask
+*
+*	Note: IDs are meant for styling unique HTML elements. If a style is meant to be
+*	applied to multiple tags, then a CLASS should be used insted. An ID is referenced
+*	by #idname and a CLASS is referenced by .classname in CSS
+*
+**/
+#wrapper {
+	width: 980px;
+	margin: 0 auto;
+}
+
+#copyright {
+	height: 25px;
+	background-color: #fff;
+	border-bottom: solid 1px #c8c8c8;
+	border-left: solid 1px #c8c8c8;
+	border-right: solid 1px #c8c8c8;
+	line-height: 24px;
+	text-indent: 10px;
+	font-size: 12px;
+	color: #999;;
+}
+
+#copyright a {
+	color: #424d78;
+	text-decoration: none;
+}
+
+#copyright a:hover {
+	text-decoration: underline;
+}
+
+#header {
+	height: 80px;
+	background-image: url(images/elmoHeader.png);
+	background-repeat: no-repeat;
+	background-position: 10px 10px;
+	padding: 0px 0px 5px 0px;
+}
+
+#pagecontent {
+	float: left;
+	width: 714px;
+	background: #fff;
+	padding: 7px;
+	min-height: 600px;
+	border-right: none;
+	border-left: solid 1px #c8c8c8;
+	border-top: solid 1px #c8c8c8;
+	border-bottom: solid 1px #c8c8c8;
+}
+
+#mainmenu {
+	overflow: hidden;
+	border-bottom: 1px solid #c8c8c8;
+	height: 31px;
+}
+
+#mainmenu ul {
+	font: bold 14px Arial;
+	text-transform: capitalize;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#mainmenu li {
+	display: inline;
+	margin: 0 2px 0 0;
+	padding: 0;
+}
+
+#mainmenu a {
+	float: left;
+	color: #fff;
+	background: #bbbdc0 url(images/mainmenu-left.gif) no-repeat left top;
+	margin: 0 4px 0 0;
+	padding: 0 0 5px 8px;
+	text-decoration: none;
+}
+
+#mainmenu a span {
+	float: left;
+	display: block;
+	background: transparent url(images/mainmenu-right.gif) no-repeat right top;
+	padding: 7px 16px 3px 6px;
+}
+
+#mainmenu a:hover {
+	background-color: #efa935;
+}
+
+#activemenu {
+	height: 38px;
+	margin-top: 5px;
+	border-bottom: 1px solid #c8c8c8;
+	text-transform: uppercase;
+}
+
+#activemenu a {
+	background-color: #e22e2e;
+	display: inline-block;
+	color: #ffffff;
+	font: bold 12px Arial;
+	padding: 8px 17px;
+	text-decoration: none;
+	border: 1px solid #e22e2e;
+}
+
+#activemenu a:hover {
+	-moz-box-shadow: inset 2px #a616170;
+	-webkit-box-shadow: inset 2px #a61617;
+	box-shadow: inset 2px #a61617;
+	background-color: #d9292a;
+	border: 1px solid #a61617;
+}
+
+#activemenu a:active {
+	-moz-box-shadow: inset 2px #000000;
+	-webkit-box-shadow: inset 2px #000000;
+	box-shadow: inset 2px #000000;
+	color: #3c3c3c;
+	background-color: #f5f5f5;
+	border: 1px solid #3c3c3c;
+	
+}
+
+#selectionbar {
+	height: 33px;
+	margin-top: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #c8c8c8;
+}
+
+#breadcrumbs {
+	height: 25px;
+	line-height: 24px;
+	padding-top: 5px;
+	font-size: 12px;
+	text-transform: capitalize;
+}
+
+#breadcrumbs a {
+	background: transparent url(images/breadcrumb.png) no-repeat center right;
+	color: #424d78;
+	text-decoration: none;
+	padding-right: 16px;
+}
+
+#breadcrumbs a:hover{
+	text-decoration: underline;
+}
+
+#content {
+	padding-left: 5px;
+}
+
+#sidebar {
+	float: right;
+	width: 235px;
+	background: #FFF;
+	font-size: 12px;
+	min-height: 1px;
+	padding: 7px;
+	border-right: solid 1px #c8c8c8;
+	border-left: solid 1px #c8c8c8;
+	border-top: solid 1px #c8c8c8;
+	border-bottom: solid 1px #c8c8c8;
+}
+
+#footer {
+	position: relative;
+	clear: both;
+	top: 20px;
+	height: 25px;
+	background-color: #fff;
+	border-top: solid 1px #c8c8c8;
+	border-left: solid 1px #c8c8c8;
+	border-right: solid 1px #c8c8c8;
+	line-height: 24px;
+	text-indent: 10px;
+	font-size: 12px;
+	color: #999;;
+}
+
+#footer a {
+	color: #424d78;
+	text-decoration: none;
+}
+
+#footer a:hover {
+	text-decoration: underline;
+}
+
+#mask {
+  	position: absolute;
+  	z-index: 9000;
+  	background-color: #000;
+  	opacity: 0.5;
+  	display: none;
+  	top: 0px;
+  	left: 0px;
+}
+
+/**
+*
+*	elmoTemplate.css CLASS Definitions
+*	CSS Styling will apply to following CLASSes
+*	.selectiontable, .celltable, .packetdiagram, .formmodule, .tabmodule, .field, .textarea
+*	.modalpopup
+*	Note: CLASSes are meant for styling multiple HTML elements. If a style is meant to be
+*	applied to unique tags, then an ID should be used insted. An ID is referenced
+*	by #idname and a CLASS is referenced by .classname in CSS
+*
+**/
+
+/**
+*	Class - HTML Form and Input
+*	styles ELMO WebGui for HTML form and input tags
+**/
+.field {
+	height: 30px;
+}
+
+.textarea {
+	height: 115px;
+}
+
+.textarea label {
+	vertical-align: top;
+}
+
+/**
+*	Class - Selection Table
+*	styles ELMO WebGui selection bar buttons in a table
+**/
+.selectiontable {
+	border-collapse: collapse;
+}
+
+.selectiontable td {
+	padding: 2px 5px 0 5px;
+}
+
+.selectiontable td.button {
+    	display: block;
+    	float: left;
+	margin: 0px 7px 0px 0px;
+    	background-color: #f5f5f5;
+    	border: 1px solid #c8c8c8;
+	padding: 7px;
+	cursor: pointer;
+}
+
+.selectiontable td.button:hover {
+    	border: 1px solid #3c3c3c;
+}
+
+.selectiontable td.button:active {
+    	border: 1px solid #6f76ff;
+}
+
+.selectiontable td.button a img {
+	border: none;
+}
+
+/**
+*	Class - Cell Table
+*	styles ELMO WebGui cells in a table when viewing streams and ports
+**/
+.celltable {
+	text-align: center;
+	border-collapse: collapse;
+	font-size: 12px;
+	width: 100%;
+}
+
+.celltable td {
+	padding: 2px 5px 0 5px;
+}
+
+.celltable tr.listrowa:hover, .celltable tr.listrowb:hover {
+	background-color: #ffe4b6;
+	cursor: pointer;
+}
+
+.celltable tr.columnlabels {
+    	border-bottom: 1px solid #eeeeee;
+    	line-height: 2.0em;
+    	margin: 0;
+}
+
+.celltable tr.listrowa {
+	background-color: #f5f5f5;
+    	border-bottom: 1px solid #eeeeee;
+	border-left: 1px solid #eeeeee;
+	border-right: 1px solid #eeeeee;
+    	line-height: 2.4em;
+    	margin: 0;
+}
+
+.celltable tr.listrowb {
+	background-color: #fff;
+    	border-bottom: 1px solid #eeeeee;
+	border-left: 1px solid #eeeeee;
+	border-right: 1px solid #eeeeee;
+    	line-height: 2.4em;
+    	margin: 0;
+}
+
+.celltable a.hiddenlink {
+	color: #000;
+	text-decoration: none;
+}
+
+.celltable td.statusr {
+	background-image: url(images/running-icon.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.celltable td.statuss {
+	background-image: url(images/stopped-icon.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.celltable td.statusi {
+	background-image: url(images/inactive-icon.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+/**
+*	Class - Packet Table
+*	styles ELMO WebGui cells in a table when creating a stream
+**/
+.packettable {
+	font-size: 11px;
+	border-collapse:collapse;
+	margin: 8px 10px 15px 10px;
+	cursor: pointer;
+}
+
+.packettable td {
+	border: 1px solid #000000;
+	padding: 2px 5px 2px 5px;
+}
+
+.packettable td a:link {
+	text-decoration: none;
+	color: #000;
+}
+
+.packettable td a:visited {
+	text-decoration: none;
+	color: #000;
+}
+
+.packettable td a:active {
+	text-decoration: none;
+	color: #000;
+}
+
+.packettable td.ethernetii {
+	background-color: #ffd1be;
+}
+
+.packettable td.ipv4 {
+	background-color: #ccffbe;
+}
+
+.packettable td.payload {
+	background-color: #bee5ff;
+}
+
+.packettable td.fcs {
+	background-color: #ffd0fa;
+}
+
+/**
+*	Class - Form Module
+*	styles ELMO WebGui fieldset intended for forms
+**/
+.formmodule {
+	padding: 5px 25px 7px 15px;
+	margin: 8px 10px 15px 10px;
+	width: 80%;
+	border: solid 1px #c8c8c8;
+	background-image: none;
+	background-position: right;
+	background-repeat: repeat-y;	
+}
+
+.formmodule legend {
+	font: bold 12px Arial;
+}
+
+.formmodule label {
+	width: 160px;
+}
+
+.formmodule textarea {
+	width: 250px;
+	height: 100px;
+	resize: none;
+}
+
+/**
+*	Class - Tab Module
+*	styles ELMO WebGui tabs in the sidebar
+**/
+.tabmodule {
+}
+
+.tabmodule .moduletitle {
+    	font-weight: bold;
+    	line-height: 30px;
+    	margin: 0px;
+    	padding: 2px 2px 0px 12px;
+	color: #FFF;
+	text-transform: capitalize;
+	cursor: pointer;
+	background: #3c3c3c;
+	background-image: url(images/collapsed-icon.png);
+	background-repeat: no-repeat;
+	background-position: right center;
+}
+
+.tabmodule .moduletitle.expanded {
+	background-image: url(images/expanded-icon.png);
+	background-repeat: no-repeat;
+	background-position: right center;
+}
+
+
+.tabmodule p {
+	padding: 0px 0px 0px 6px;
+}
+
+.tabmodule b {
+	color: #e22e2f;
+}
+
+/**
+*	Class - Tab Module
+*	styles ELMO WebGui Modal Popup
+**/
+ 
+.modalpopup .window {
+ 	position: fixed;
+ 	width: 440px;
+ 	height: 200px;
+  	display: none;
+  	z-index: 9999;
+  	padding: 20px; 
+  	background-color: #FFF;
+}
